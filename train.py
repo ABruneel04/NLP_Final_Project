@@ -37,8 +37,8 @@ def train():
     # embed_size = 256
     # hidden_size = 256
     # Edited embed/hidden size:
-    embed_size = 32
-    hidden_size = 32
+    embed_size = 256
+    hidden_size = 256
     # Constant vocab size/layers
     vocab_size = len(dataset.vocab)
     num_layers = 1
@@ -46,7 +46,7 @@ def train():
     # learning_rate = 3e-4
     # num_epochs = 100
     # Edited learning rate/epochs:
-    learning_rate = 1e-3
+    learning_rate = 3e-4
     num_epochs = 5
 
 
