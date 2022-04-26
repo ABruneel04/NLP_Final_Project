@@ -47,7 +47,7 @@ def train():
     # num_epochs = 100
     # Edited learning rate/epochs:
     learning_rate = 3e-4
-    num_epochs = 50
+    num_epochs = 20
 
 
     # for tensorboard
