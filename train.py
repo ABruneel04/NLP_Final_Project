@@ -68,8 +68,8 @@ def train():
             param.requires_grad = train_CNN
     
     # Commenting out to try to fix issue
-    # if load_model:
-        # step = load_checkpoint(torch.load("my_checkpoint.pth.tar"), model, optimizer)
+    if load_model:
+        step = load_checkpoint(torch.load("my_checkpoint.pth.tar"), model, optimizer)
 
     model.train()
 
