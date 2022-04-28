@@ -114,21 +114,21 @@ def train():
 
             outputs = model(imgs, captions[:-1])
             
-            print('*******')
-            shaped_outputs = outputs.shape[2]
-            print(shaped_outputs)
+            # print('*******')
+            # shaped_outputs = outputs.shape[2]
+            # print(shaped_outputs)
             # Making a list to store captions used for bleu scores
-            bleu_captions = list()
+            # bleu_captions = list()
             # Building list of captions split on spaces
-            for caption in captions[:-1]:
-                bleu_captions.append(caption.split((1, 1))
+            # for caption in captions[:-1]:
+                # bleu_captions.append(caption.split((1, 1))
             # Calculating bleu score by each sentence
-            line_item_bleu_score = sentence_bleu(bleu_captions, outputs.shape[2])
-            all_bleu_scores.append(line_item_bleu_score)
+            # line_item_bleu_score = sentence_bleu(bleu_captions, outputs.shape[2])
+            # all_bleu_scores.append(line_item_bleu_score)
             # Calculating BLEU score for the epoch
-            bleu_sum = sum(all_bleu_scores)
-            bleu_len = len(all_bleu_scores)
-            bleu_score = sum/len
+            # bleu_sum = sum(all_bleu_scores)
+            # bleu_len = len(all_bleu_scores)
+            # bleu_score = sum/len
 
             loss = criterion(
                 outputs.reshape(-1, outputs.shape[2]), captions.reshape(-1)
