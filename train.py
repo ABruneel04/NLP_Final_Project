@@ -84,7 +84,7 @@ def train():
             param.requires_grad = train_CNN
 
     if load_model:
-        step = load_checkpoint(torch.load("my_checkpoint.pth.tar"), model, optimizer)
+        step = load_checkpoint(torch.load("/content/drive/MyDrive/NLP_Final_Project/my_checkpoint.pth"), model, optimizer)
 
     model.train()
 
@@ -104,7 +104,7 @@ def train():
                 "optimizer": optimizer.state_dict(),
                 "step": step,
             }
-            save_checkpoint(checkpoint)
+            save_checkpoint(checkpoint, "/content/drive/MyDrive/NLP_Final_Project/my_checkpoint.pth")
 
         for idx, (imgs, captions) in tqdm(
             enumerate(train_loader), total=len(train_loader), leave=False
