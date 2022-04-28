@@ -17,8 +17,8 @@ Epochs -- 100 (original)
 
 After running the model myself, I found the best performance (for the limited number of epochs I was able to achieve used Google Colab's maximum 12 hour runtime)
 to be found used these parameters:  
-Embedding layers -- 128  
-Hidden layers -- 128  
+Embedding layers -- 256  
+Hidden layers -- 256
 Learning rate -- 1e-4  
 Epochs -- 20  
 
