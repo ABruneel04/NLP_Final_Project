@@ -57,13 +57,13 @@ def train():
     train_CNN = True
 
     # Hyperparameters (attempting to fine-tune for low amount of epochs)
-    embed_size = 256
-    hidden_size = 256
+    embed_size = 128
+    hidden_size = 128
     # Constant vocab size/layers
     vocab_size = len(dataset.vocab)
     num_layers = 1
     # More hyperparameters
-    learning_rate = 3e-4
+    learning_rate = 1e-4
     num_epochs = 20
 
 
