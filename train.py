@@ -126,9 +126,9 @@ def train():
             #line_item_bleu_score = sentence_bleu(bleu_captions, outputs.shape[2])
             #all_bleu_scores.append(line_item_bleu_score)
             # Calculating BLEU score for the epoch
-            bleu_sum = sum(all_bleu_scores)
-            bleu_len = len(all_bleu_scores)
-            bleu_score = sum/len
+            #bleu_sum = sum(all_bleu_scores)
+            #bleu_len = len(all_bleu_scores)
+            #bleu_score = sum/len
 
             loss = criterion(
                 outputs.reshape(-1, outputs.shape[2]), captions.reshape(-1)
