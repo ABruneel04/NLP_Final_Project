@@ -114,15 +114,12 @@ def train():
 
             outputs = model(imgs, captions[:-1])
             
-            print('*******')
-            copy_outputs = outputs
-            shaped_outputs = copy_outputs.reshape(-1, copy_outputs.shape[2])
-            print(shaped_outputs)
             # Making a list to store captions used for bleu scores
             bleu_captions = list()
             # Building list of captions split on spaces
             for caption in captions[:-1]:
                 bleu_captions.append(caption.split((1, 1))
+                print(bleu_captions)
             # Calculating bleu score by each sentence
             # line_item_bleu_score = sentence_bleu(bleu_captions, outputs.shape[2])
             # all_bleu_scores.append(line_item_bleu_score)
