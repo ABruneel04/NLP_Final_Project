@@ -120,7 +120,6 @@ def train():
             for caption in captions[:-1]:
                 bleu_captions.append(caption.split((1, 1))
             # Calculating bleu score by each sentence
-            print(outputs)
             all_bleu_scores.append(sentence_bleu(bleu_captions, outputs))
             # Calculating BLEU score for the epoch
             bleu_sum = sum(all_bleu_scores)
