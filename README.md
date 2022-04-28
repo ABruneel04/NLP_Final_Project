@@ -22,6 +22,12 @@ Hidden layers -- 256
 Learning rate -- 1e-4  
 Epochs -- 20  
 
+Other parameters that were tested (to less successful results):  
+Embedding layers -- 128/64/32  
+Hidden layers -- 128/64/32  
+Learning rate -- 1e-3  
+Epochs -- 20/15/10/5  
+
 Additional Notes on how to run this code using Google Colab!  
 Simply run the attached file 'AlternativeModel.ipynb' and change the runtime settings to use GPU  
 First mount the code using the top cell  
