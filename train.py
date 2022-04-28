@@ -64,7 +64,7 @@ def train():
     num_layers = 1
     # More hyperparameters
     learning_rate = 1e-4
-    num_epochs = 20
+    num_epochs = 1
 
 
     # for tensorboard
