@@ -57,8 +57,8 @@ def train():
     train_CNN = True
 
     # Hyperparameters (attempting to fine-tune for low amount of epochs)
-    embed_size = 128
-    hidden_size = 128
+    embed_size = 256
+    hidden_size = 256
     # Constant vocab size/layers
     vocab_size = len(dataset.vocab)
     num_layers = 1
