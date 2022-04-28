@@ -134,7 +134,7 @@ if __name__ == "__main__":
     )
 
     loader, dataset = get_loader(
-        "data/images", "data/captions.txt", transform=transform
+        "data\images", "data\captions.txt", transform=transform
     )
 
     for idx, (imgs, captions) in enumerate(loader):

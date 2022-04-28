@@ -20,16 +20,15 @@ def train():
     )
 
     train_loader, dataset = get_loader(
-        root_folder="data/images",
-        annotation_file="data/captions.txt",
+        root_folder="data\images",
+        annotation_file="data\captions.txt",
         transform=transform,
         num_workers=2,
     )
 
     torch.backends.cudnn.benchmark = True
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    # Set to load/save/train
-    load_model = False
+    load_model = True
     save_model = True
     train_CNN = True
 
@@ -38,8 +37,8 @@ def train():
     # embed_size = 256
     # hidden_size = 256
     # Edited embed/hidden size:
-    embed_size = 256
-    hidden_size = 256
+    embed_size = 32
+    hidden_size = 32
     # Constant vocab size/layers
     vocab_size = len(dataset.vocab)
     num_layers = 1
@@ -47,8 +46,8 @@ def train():
     # learning_rate = 3e-4
     # num_epochs = 100
     # Edited learning rate/epochs:
-    learning_rate = 3e-4
-    num_epochs = 20
+    learning_rate = 1e-3
+    num_epochs = 5
 
 
     # for tensorboard
@@ -66,8 +65,7 @@ def train():
             param.requires_grad = True
         else:
             param.requires_grad = train_CNN
-    
-    # Commenting out to try to fix issue
+
     if load_model:
         step = load_checkpoint(torch.load("my_checkpoint.pth.tar"), model, optimizer)
 
