@@ -1,3 +1,10 @@
+# This section of the project worked on by: Andrew Bruneel
+# Code in this file simply loads in the data files that are downloaded onto
+# my computer to be used for training. The vocabulary is also initialized here,
+# and <SOS>, <EOS>, and <UNK> tags are created to be used later. In general,
+# a high enough leanring rate/dimensions within my neural networks stopped the
+# <UNK> tag from being used frequently
+
 import os  # when loading file paths
 import pandas as pd  # for lookup in annotation file
 import spacy  # for tokenizer
@@ -6,14 +13,6 @@ from torch.nn.utils.rnn import pad_sequence  # pad batch
 from torch.utils.data import DataLoader, Dataset
 from PIL import Image  # Load img
 import torchvision.transforms as transforms
-
-
-# We want to convert text -> numerical values
-# 1. We need a Vocabulary mapping each word to a index
-# 2. We need to setup a Pytorch dataset to load the data
-# 3. Setup padding of every batch (all examples should be
-#    of same seq_len and setup dataloader)
-# Note that loading the image is very easy compared to the text!
 
 # Download with: python -m spacy download en
 spacy_eng = spacy.load("en_core_web_sm")
@@ -57,7 +56,7 @@ class Vocabulary:
             for token in tokenized_text
         ]
 
-
+# Loading in the images and captions from our files
 class FlickrDataset(Dataset):
     def __init__(self, root_dir, captions_file, transform=None, freq_threshold=5):
         self.root_dir = root_dir
@@ -102,7 +101,9 @@ class MyCollate:
 
         return imgs, targets
 
-
+# Creates a data loader for the files we are using, with root file are the images
+# and the annotation file as the captions (5 per image). Additionally, sets the
+# batch size here and decides if the data will be shuffled during training
 def get_loader(
     root_folder,
     annotation_file,
@@ -134,7 +135,7 @@ if __name__ == "__main__":
     )
 
     loader, dataset = get_loader(
-        "data\images", "data\captions.txt", transform=transform
+        "data/images", "data/captions.txt", transform=transform
     )
 
     for idx, (imgs, captions) in enumerate(loader):

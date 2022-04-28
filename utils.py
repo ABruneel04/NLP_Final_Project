@@ -1,3 +1,10 @@
+# This section of the project worked on by: Andrew Bruneel
+# Below, the model's training can be evaluated based on the captions returned
+# for the given sample sentences. This model is more rudimentary at a base level
+# than the Karpathy model, so a lot of typical scoring algorithms were not
+# implemented. Because of this, I relied on sample sentences at first to evaluate
+# how my model was performing.
+
 import torch
 import torchvision.transforms as transforms
 from PIL import Image
@@ -12,6 +19,8 @@ def print_examples(model, device, dataset):
         ]
     )
 
+    # Evaluating the model on five sample sentences to see its performance over epochs
+    # Occurs every time the model is saved/loaded
     model.eval()
     test_img1 = transform(Image.open("test_examples/dog.jpg").convert("RGB")).unsqueeze(
         0
