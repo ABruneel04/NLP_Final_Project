@@ -1,4 +1,4 @@
-# Detailed user guide on how to run this code:::
+# Detailed user guide on how to run this code:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 This code is used for image captioning on the flikr8k dataset (although it can be used on any dataset processed to have the same structure).  
 
