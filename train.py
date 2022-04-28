@@ -50,7 +50,7 @@ def train():
     torch.backends.cudnn.benchmark = True
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # Deciding if the model will loaded between instances of running train.py
-    load_model = True
+    load_model = False
     # Deciding if the model will be saved on the latest iterations
     save_model = True
     # Deciding if the CNN will be trained across epochs
