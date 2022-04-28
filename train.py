@@ -60,7 +60,6 @@ def train():
     embed_size = 128
     hidden_size = 128
     # Constant vocab size/layers
-    print(len(dataset.vocab))
     vocab_size = len(dataset.vocab)
     num_layers = 1
     # More hyperparameters
@@ -124,8 +123,8 @@ def train():
             for output in outputs:
                 all_bleu_scores.append(sentence_bleu(bleu_captions, output))
             # Calculating BLEU score for the epoch
-            sum = sum(all_bleu_scores)
-            len = len(all_bleu_scores)
+            bleu_sum = sum(all_bleu_scores)
+            bleu_len = len(all_bleu_scores)
             bleu_score = sum/len
 
             loss = criterion(
