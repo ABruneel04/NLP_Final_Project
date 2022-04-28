@@ -60,6 +60,7 @@ def train():
     embed_size = 128
     hidden_size = 128
     # Constant vocab size/layers
+    print(len(dataset.vocab))
     vocab_size = len(dataset.vocab)
     num_layers = 1
     # More hyperparameters
