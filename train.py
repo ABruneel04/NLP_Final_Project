@@ -115,7 +115,8 @@ def train():
             outputs = model(imgs, captions[:-1])
             
             print('*******')
-            shaped_outputs = outputs.reshape(-1, outputs.shape[2])
+            copy_outputs = outputs
+            shaped_outputs = copy_outputs.reshape(-1, copy_outputs.shape[2])
             print(shaped_outputs)
             # Making a list to store captions used for bleu scores
             bleu_captions = list()
