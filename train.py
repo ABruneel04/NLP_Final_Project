@@ -113,7 +113,9 @@ def train():
             captions = captions.to(device)
 
             outputs = model(imgs, captions[:-1])
-
+            
+            shaped_outputs = outputs.shape[1]
+            print(shaped_outputs)
             # Making a list to store captions used for bleu scores
             bleu_captions = list()
             # Building list of captions split on spaces
