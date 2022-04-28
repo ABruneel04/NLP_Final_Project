@@ -93,7 +93,7 @@ def train():
         bleu_score = 0
         all_bleu_scores = list()
         # Added clarity of epoch here, and working on BLEU Score as well
-        print("Epoch #" + epoch)
+        print("Epoch #" + str(epoch))
         print("---------")
         # Uncomment the line below to see a couple of test cases
         print_examples(model, device, dataset)
