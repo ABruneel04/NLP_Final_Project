@@ -119,7 +119,7 @@ def train():
             # Building list of captions split on spaces
             for caption in captions[:-1]:
                 bleu_captions.append(caption.split((1, 1))
-                print(bleu_captions)
+                print(caption.split(1,1))
             # Calculating bleu score by each sentence
             # line_item_bleu_score = sentence_bleu(bleu_captions, outputs.shape[2])
             # all_bleu_scores.append(line_item_bleu_score)
