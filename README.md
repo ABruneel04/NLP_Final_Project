@@ -1,5 +1,7 @@
 # Detailed user guide on how to run this code:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Repo link: https://github.com/aladdinpersson/Machine-Learning-Collection
+
 This code is used for image captioning on the flikr8k dataset (although it can be used on any dataset processed to have the same structure).  
 
 To run this code, simply download the files off of this repository (including images/captions). Next, adjust your file paths within train.py
