@@ -1,6 +1,6 @@
 # Detailed user guide on how to run this code:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Repo link: https://github.com/aladdinpersson/Machine-Learning-Collection
+Repo link: https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/more_advanced/image_captioning
 
 This code is used for image captioning on the flikr8k dataset (although it can be used on any dataset processed to have the same structure).  
 
