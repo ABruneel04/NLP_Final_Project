@@ -90,8 +90,8 @@ def train():
 
     for epoch in range(num_epochs):
         # Storing bleu score
-        bleu_score = 0
-        all_bleu_scores = list()
+        # bleu_score = 0
+        # all_bleu_scores = list()
         # Added clarity of epoch here, and working on BLEU Score as well
         print("Epoch #" + str(epoch))
         print("---------")
@@ -115,7 +115,7 @@ def train():
             outputs = model(imgs, captions[:-1])
             
             # Making a list to store captions used for bleu scores
-            bleu_captions = list()
+            # bleu_captions = list()
             # Building list of captions split on spaces
             # for caption in captions[:-1]:
                 # bleu_captions.append(caption.split((1, 1))
